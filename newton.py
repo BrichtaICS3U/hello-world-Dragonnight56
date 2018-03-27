@@ -11,8 +11,11 @@ def newton(x, accuracy=0.001) :
   can use a larger or smaller number if you wish. The smaller the number, the more time the calculation will take."""
 
   Guess = x/2
+  loops = 0
 
   while Abs(Guess**2-x) >= accuracy :
     Guess = Guess - ((Guess**2 - x)/(2*Guess))
+    loops += 1
 
-  return round(Guess,3)
+  print ("Looped:", loops)
+  return print("Answer:", round(Guess,3))

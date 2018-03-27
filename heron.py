@@ -21,8 +21,11 @@ def heron(x, accuracy=0.001) :
   can use a larger or smaller number if you wish. The smaller the number, the more time the calculation will take."""
   
   Guess = x/2
+  loops = 0
 
   while Abs(Guess**2-x) >= accuracy :
     Guess = (Guess + x/Guess)/2
+    loops += 1
 
-  return Guess
+  print ("Looped:", loops)
+  return print("Answer:", round(Guess,3))
